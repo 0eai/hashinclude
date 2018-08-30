@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <color name="colorPrimary">#4099ff</color>
+    <color name="colorPrimaryDark">#4099ff</color>
+    <color name="colorAccent">#4099ff</color>
+    <color name="tcolor">#4099ff</color>
+    <color name="ripple">#0000ff</color>
+    <color name="drawer_text">#212121</color>
+    <color name="white">#ffffff</color>
+    <color name="medium_grey">#9e9e9e</color>
+    <color name="scrim">#174099ff</color>
+    <color name="dark_grey">#424242</color>
+    <color name="mid_grey">#1e0000ff</color>
+    <color name="background_light">#fafafa</color> <!-- grey 50 -->
+    <color name="background_super_dark">#ff292929</color>
+    <color name="button_grey">#757575</color>
+    <color name="text_primary_light">#ffffffff</color>
+    <color name="gif_badge_light_image">#40000000</color>
+    <color name="gif_badge_dark_image">#b3ffffff</color>
+    <color name="light_grey">#c2bfbf</color>
+    <color name="red">#f44336</color>
+    <color name="black_scrim">#3c000000</color>
+    <color name="pink_scrim">#c1ff69b4</color>
+    <color name="white_scrim">#c4ffffff</color>
+
+</resources>

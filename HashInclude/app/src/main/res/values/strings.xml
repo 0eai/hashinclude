@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">HashInclude</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- drawer button text -->
+    <string name="point">Point</string>
+    <string name="rank">Rank</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="practice">Practice</string>
+    <string name="library">Library</string>
+    <string name="donate">Donate</string>
+    <string name="settings">Setting</string>
+    <string name="feedback">Feedback</string>
+    <string name="transition_fab" translatable="false">transition_fab</string>
+    <string name="search">Search</string>
+    <string name="transition_search_back" translatable="false">transition_search_back</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="send">Send</string>
+
+    <string name="super_admin">Super Admin</string>
+    <string name="admin">Admin</string>
+    <string name="gold">Gold</string>
+    <string name="elite">Elite</string>
+    <string name="user">User</string>
+
+    <string name="feedback_desc">Help us get better.</string>
+    <string name="feedback_helper">Let\'s improve #include</string>
+    <string name="hint">Say Something...</string>
+    <string name="search_hint">Search include</string>
+    <array name="loading_placeholders_dark">
+        <item>#ff191919</item>
+        <item>#ff212121</item>
+        <item>#ff232323</item>
+    </array>
+    <string name="help_about_content_00"> ● About #include</string>
+    <string name="help_about_content_01">Hash Include Club</string>
+
+    <string name="help_about_content_03">https://hash-include-club.firebaseapp.com/</string>
+    <string name="help_about_content_04">hashinclude17@gmail.com</string>
+    <string name="help_about_content_0"> ● About Me</string>
+    <string name="help_about_content_1">Ankit Kumar Singh</string>
+    <string name="help_about_content_2">https://github.com/Anspire</string>
+    <string name="help_about_content_3">https://ankit-s.firebaseapp.com/</string>
+    <string name="help_about_content_4">iamanspire@gmail.com</string>
+    <string name="copy_to_clipboard">Copied e-mail to clipboard</string>
+
+    <string name="transition_circular_revel" translatable="false">transition_circular_revel</string>
+    <string name="transition_designer_news_login" translatable="false">transition_designer_news_login</string>
+    <string-array name="date_array">
+        <item>Last date</item>
+        <item>Important date</item>
+        <item>Start date</item>
+        <item>Due date</item>
+    </string-array>
+    <string-array name="que_type_array">
+        <item>True/False</item>
+        <item>Mcq-One</item>
+        <item>Mcq-Multiple</item>
+        <item>Program</item>
+        <item>Output</item>
+    </string-array>
+    <string-array name="user_type">
+        <item>Super Admin</item>
+        <item>Admin</item>
+        <item>Gold</item>
+        <item>Elite</item>
+        <item>User</item>
+    </string-array>
+    <string-array name="event_array">
+        <item>Challenge</item>
+        <item>Seminar</item>
+        <item>Webinar</item>
+        <item>Workshop</item>
+    </string-array>
+    <string-array name="level_array">
+        <item>easy</item>
+        <item>medium</item>
+        <item>hard</item>
+    </string-array>
+    <string name="pic">Choose pointer image</string>
+    <string name="title">Add Title</string>
+    <string name="about">Add About</string>
+    <string name="about1">About</string>
+    <string name="link">Add link</string>
+    <string name="date">Add Date</string>
+    <string name="question">Add Question</string>
+    <string name="tag">Add Tags</string>
+    <string name="answer">Add Answer</string>
+    <string name="option1">Add Option 1</string>
+    <string name="option2">Add Option 2</string>
+    <string name="option3">Add Option 3</string>
+    <string name="option4">Add Option 4</string>
+    <string name="input1">Add Input 1</string>
+    <string name="input2">Add Input 2</string>
+    <string name="output1">Add Output 1</string>
+    <string name="output2">Add Output 2</string>
+    <string name="s_num">Add Session No.</string>
+    <string name="keylerning">Add Key Learning</string>
+    <string name="change_logo_title">Change Picture</string>
+    <string name="change_logo_content">Select a picture to do so.</string>
+    <string name="from_gallery">FROM GALLERY</string>
+    <string name="from_camera">FROM CAMERA</string>
+
+    <string name="title_activity_add_event">Add Event</string>
+    <string name="title_activity_add_pointer">Add Pointer</string>
+    <string name="title_activity_add_project">Add Garage</string>
+    <string name="title_activity_add_reinforce">Add Reinforce</string>
+
+    <string name="select_tag">●</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="send_to">Send to</string>
+</resources>
