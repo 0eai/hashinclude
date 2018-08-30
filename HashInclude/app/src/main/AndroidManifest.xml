@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hash.include">
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application
+        android:name=".HashInclude"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".activity.SigninActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activity.HashActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.AddCykActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".activity.AddEventActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AddGarageActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AddPointerActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AddReinforceActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AddSessionActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.EditProfileActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.CykActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.EventDetailsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.LeaderBoardActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.LibraryActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.PendingUserActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.PracticeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ProfileDetailsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ProjectDetailsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ReinforceDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.SessionDetailsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.ImageViewerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_add_project"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Add"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".activity.SearchActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Hash.Translucent.Search">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <service
+            android:name=".notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>
