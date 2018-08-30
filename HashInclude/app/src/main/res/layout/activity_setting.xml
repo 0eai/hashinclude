@@ -1,0 +1,125 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="dismiss">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:elevation="@dimen/dimen_2dp"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="0dp"
+        android:paddingTop="0dp"
+        android:transitionName="@string/transition_designer_news_login">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/tcolor"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/activity_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Settings"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_winners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_group"
+                            android:tint="@color/tcolor" />
+
+                        <TextView
+                            android:id="@+id/settings_team_text"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="Team member"
+                            android:textColor="@android:color/black" />
+
+                        <ImageButton
+                            android:id="@+id/settings_team_button"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/snackbar_shape_background"
+                            android:src="@drawable/ic_account_multiple_plus"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/settings_member_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:paddingBottom="8dp">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

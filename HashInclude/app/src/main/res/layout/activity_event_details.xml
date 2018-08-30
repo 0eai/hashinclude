@@ -1,0 +1,587 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#2196F3" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="top"
+                android:background="@color/dark_grey"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/event_details_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="@color/dark_grey"
+                    android:elevation="3dp"
+                    android:scaleType="centerCrop" />
+
+            </LinearLayout>
+
+            <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/icon_left"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="top|left"
+                android:background="@color/transparent"
+                android:scaleType="center"
+                app:materialIcon="arrow_left"
+                app:materialIconColor="@color/white"
+                app:materialIconSize="24dp" />
+
+            <Button
+                android:id="@+id/pending_request_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="8dp"
+                android:text="Pending Request"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+            <android.support.v7.widget.CardView
+                android:id="@+id/event_details_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:background="@color/tcolor"
+                    android:backgroundTint="@color/tcolor"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:id="@+id/register_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:padding="8dp"
+                        android:text="Register"
+                        android:textColor="@color/white" />
+                </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/event_details_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="CHALLENGE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/event_details_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="Execute #2"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2dp"
+                android:layout_marginLeft="@dimen/dimen_2dp"
+                android:layout_marginRight="@dimen/dimen_2dp"
+                android:layout_marginTop="208dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardPreventCornerOverlap="false"
+                app:contentPadding="0dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:mrl_rippleAlpha="0.2"
+                    app:mrl_rippleColor="@color/ripple"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:orientation="horizontal">
+
+                            <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/user_name_icon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:background="@color/transparent"
+                                android:clickable="false"
+                                android:scaleType="center"
+                                app:materialIcon="details"
+                                app:materialIconColor="@color/tcolor"
+                                app:materialIconSize="24dp" />
+
+                            <TextView
+                                android:id="@+id/event_details_about"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:clickable="false"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingRight="10dp"
+                                android:scrollbars="none"
+                                android:text=""
+                                android:textColor="@color/drawer_text"
+                                style="@style/TextAppearance.AppCompat.Small"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:orientation="horizontal">
+
+                            <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/link_icon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/transparent"
+                                android:clickable="false"
+                                android:scaleType="center"
+                                app:materialIcon="link"
+                                app:materialIconColor="@color/tcolor"
+                                app:materialIconSize="24dp" />
+
+                            <TextView
+                                android:id="@+id/event_details_link"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:autoLink="all"
+                                android:gravity="center|left"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text=""
+                                style="@style/TextAppearance.AppCompat.Small"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:orientation="horizontal">
+
+                            <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/org_icon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/transparent"
+                                android:clickable="false"
+                                android:scaleType="center"
+                                app:materialIcon="bank"
+                                app:materialIconColor="@color/tcolor"
+                                app:materialIconSize="24dp" />
+
+                            <TextView
+                                android:id="@+id/event_org"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:autoLink="all"
+                                android:gravity="center|left"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text=""
+                                style="@style/TextAppearance.AppCompat.Small" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:orientation="horizontal">
+
+                            <net.steamcrafted.materialiconlib.MaterialIconView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/status_icon"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@color/transparent"
+                                android:clickable="false"
+                                android:scaleType="center"
+                                app:materialIcon="flag"
+                                app:materialIconColor="@color/tcolor"
+                                app:materialIconSize="24dp" />
+
+                            <TextView
+                                android:id="@+id/event_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:autoLink="all"
+                                android:gravity="center|left"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text=""
+                                style="@style/TextAppearance.AppCompat.Small" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dimen_2dp"
+            android:layout_marginLeft="@dimen/dimen_2dp"
+            android:layout_marginRight="@dimen/dimen_2dp"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/record_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/start_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/ripple"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/start_date_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:text="OPENS AT"
+                                android:textColor="@color/drawer_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/end_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/ripple"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/end_date_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:text="CLOSES ON"
+                                android:textColor="@color/drawer_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/duration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/ripple"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/duration_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:text="DURATION"
+                                android:textColor="@color/drawer_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dimen_2dp"
+            android:layout_marginLeft="@dimen/dimen_2dp"
+            android:layout_marginRight="@dimen/dimen_2dp"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp">
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:mrl_rippleAlpha="0.2"
+                app:mrl_rippleColor="@color/ripple"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <hash.include.ui.RiseNumberTextView
+                                android:id="@+id/event_details_total_reg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/ripple"
+                                android:textSize="40sp" />
+
+                            <TextView
+                                android:id="@+id/Total_register_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:text="Candidates register"
+                                android:textColor="@color/drawer_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <hash.include.ui.RiseNumberTextView
+                                android:id="@+id/event_details_total_part"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/ripple"
+                                android:textSize="40sp" />
+
+                            <TextView
+                                android:id="@+id/total_part_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:text="Candidates take part"
+                                android:textColor="@color/drawer_text"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_winners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_2dp"
+            android:layout_marginLeft="@dimen/dimen_2dp"
+            android:layout_marginRight="@dimen/dimen_2dp"
+            android:visibility="gone"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_group"
+                            android:tint="@color/tcolor" />
+
+                        <TextView
+                            android:id="@+id/winners_text"
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="winners"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/winners_recyclerview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:foregroundGravity="center">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/delete_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Delete"
+            android:textColor="@color/tcolor"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

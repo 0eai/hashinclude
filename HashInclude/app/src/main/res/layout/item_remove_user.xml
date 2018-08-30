@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:visibility="visible"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="18dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/user_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="bottom|left"
+                android:textColor="@color/dark_grey" />
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:textColor="@color/medium_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/remove_member"
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:padding="16dp"
+            android:src="@drawable/ic_minus_circle_outline"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:tint="@color/tcolor"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

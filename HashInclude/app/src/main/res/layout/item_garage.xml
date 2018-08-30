@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/image_card"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/dimen_4dp"
+    android:layout_marginLeft="@dimen/dimen_8dp"
+    android:layout_marginRight="@dimen/dimen_8dp"
+    android:layout_marginTop="@dimen/dimen_4dp"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardElevation="1dp">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#17181a"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="@dimen/dimen_36dp"
+            android:layout_height="@dimen/dimen_36dp"
+            android:layout_gravity="top|end"
+            android:layout_marginBottom="@dimen/padding_normal"
+            android:background="@drawable/fab"
+            android:elevation="1dp"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:stateListAnimator="@animator/raise"
+            android:tint="@color/tcolor"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/project_poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/pink_scrim"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+        <ProgressBar
+            android:id="@+id/profile_pic_progressbar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:progress="100"
+            android:progressTint="@color/white"
+            android:visibility="visible" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

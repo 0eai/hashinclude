@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:onClick="dismiss">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:elevation="@dimen/dimen_2dp"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingEnd="0dp"
+        android:paddingStart="0dp"
+
+        android:paddingTop="0dp"
+        android:transitionName="@string/transition_circular_revel">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/tcolor"
+                android:paddingRight="16dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/activity_title"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Check your knowledge"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_check_your_knowledge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/mid_grey"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/text_check_your_knowledge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="4dp"
+                                    android:paddingLeft="16dp"
+                                    android:paddingRight="16dp"
+                                    android:paddingTop="16dp"
+                                    android:text="Check your knowledge"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/image_check_your_knowledge"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_margin="16dp"
+                                android:scaleType="centerCrop"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/text_check_your_knowledge_que"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Drive into the Digital Garage and explore how you can make the most of online opportunities. This"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_check_your_knowledge_instruction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="24dp"
+                            android:paddingLeft="24dp"
+                            android:paddingRight="24dp"
+                            android:paddingTop="24dp"
+                            android:text="Select the option(s) you think are correct, then hit SUBMIT"
+                            android:textColor="@android:color/black"
+                            android:textSize="15dp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_check_your_knowledge_radio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/radio_button_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:padding="16dp"
+                                    android:text="" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_button_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:padding="16dp"
+                                    android:text="" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_button_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:padding="16dp"
+                                    android:text="" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_button_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:padding="16dp"
+                                    android:text="" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_check_your_knowledge_check"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <CheckBox
+                                android:id="@+id/check_box_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:padding="16dp"
+                                android:text="" />
+
+                            <CheckBox
+                                android:id="@+id/check_box_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:padding="16dp"
+                                android:text="" />
+
+                            <CheckBox
+                                android:id="@+id/check_box_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:padding="16dp"
+                                android:text="" />
+
+                            <CheckBox
+                                android:id="@+id/check_box_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:padding="16dp"
+                                android:text="" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_check_your_knowledge_output"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/edit_text_output"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:autoLink="all"
+                                android:background="@color/transparent"
+                                android:hint="Type your output"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp"
+                                android:scrollbars="none"
+                                android:textColor="@color/dark_grey" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_check_your_knowledge_program"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/edit_text_program"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginRight="24dp"
+                                android:autoLink="all"
+                                android:background="@color/transparent"
+                                android:hint="Type your code"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp"
+                                android:scrollbars="none"
+                                android:textColor="@color/dark_grey" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_check_your_knowledge_true_false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/radio_button_true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:padding="16dp"
+                                    android:text="True" />
+
+                                <RadioButton
+                                    android:id="@+id/radio_button_false"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:padding="16dp"
+                                    android:text="False" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/cyk_success_indicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_marginTop="24dp"
+                                android:padding="12dp"
+                                android:tint="@color/dark_grey" />
+
+                            <TextView
+                                android:id="@+id/cyk_point_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="16dp"
+                                android:text="0"
+                                android:textSize="16sp" />
+
+                            <Button
+                                android:id="@+id/button_submit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="24dp"
+                                android:layout_marginRight="40dp"
+                                android:layout_marginTop="24dp"
+                                android:background="@drawable/button_background"
+                                android:backgroundTint="@color/tcolor"
+                                android:gravity="center"
+                                android:paddingLeft="24dp"
+                                android:paddingRight="24dp"
+                                android:text="submit"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

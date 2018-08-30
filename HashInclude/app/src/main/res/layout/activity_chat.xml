@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/tcolor"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/activity_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center|left"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_pic"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginRight="8dp"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:layout_above="@+id/send_text_card" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/send_text_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:elevation="2dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/send_text_edittext"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint"
+                android:padding="10dp"
+                android:scrollbars="none"
+                android:textColor="@color/dark_grey"
+                android:textStyle="normal" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/send_text_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/tcolor"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_send"
+                    android:tint="@android:color/white" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/send_image_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/tcolor"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_menu_gallery"
+                    android:tint="@android:color/white" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HashActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tcolor"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/tcolor"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/activity_title_inc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:text="#inc"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/activity_title_lude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="lude"
+                    android:textColor="#f4c20d"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            app:tabBackground="@drawable/tab_color_selector"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/tcolor"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="72dp"
+            app:tabPaddingEnd="24dp"
+            app:tabPaddingStart="24dp"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/white"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_hash" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:tint="@android:color/white"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</android.support.design.widget.CoordinatorLayout>

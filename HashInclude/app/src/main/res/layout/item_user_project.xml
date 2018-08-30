@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/image_card"
+    android:layout_width="270dp"
+    android:layout_height="140dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#17181a"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/project_poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="PROJECT"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="How to Use Git and GitHub"
+            android:textColor="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/profile_pic_progressbar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            android:progress="100"
+            android:progressTint="@color/white"
+            android:visibility="visible" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    app:cardCornerRadius="3dp"
+    app:cardBackgroundColor="@color/dark_grey"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/dialog_card_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback"
+                android:layout_weight="1"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/button_grey" />
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/feedback_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_desc"
+            android:textColor="@color/button_grey" />
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="@string/hint"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text=""
+            android:textColorHint="@color/button_grey"
+            android:textColor="@color/light_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimen_16dp">
+
+            <TextView
+                android:id="@+id/helper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:layout_marginEnd="@dimen/dimen_24dp"
+                android:text="@string/feedback_helper"
+                android:textColor="@color/button_grey" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0/1-400"
+                android:layout_marginStart="@dimen/dimen_36dp"
+                android:gravity="end|center_vertical"
+                android:textColor="@color/button_grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/dialog_cancel"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:id="@+id/dialog_send"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
